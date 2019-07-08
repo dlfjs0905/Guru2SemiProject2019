@@ -15,7 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="새 메모 작성" />
+        android:background="#FFC107"
+        android:text="새 메모 작성"
+        android:layout_margin="10dp"/>
 
     <ListView
         android:id="@+id/lstMemo"

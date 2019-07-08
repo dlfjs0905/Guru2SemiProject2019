@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="회원가입"
         android:textSize="25sp"
@@ -25,14 +25,14 @@
         android:layout_width="150dp"
         android:layout_height="135dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@drawable/ap" />
 
     <Button
         android:id="@+id/btnCamera"
@@ -41,11 +41,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:background="#AFEDF4"
+        android:background="#FFC107"
         android:text="  사진찍기  "
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
 
@@ -54,7 +54,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:ems="10"
         android:hint="ID입력"
@@ -115,7 +115,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="#AFEDF4"
+        android:background="#FFC107"
         android:text="  회원가입  "
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

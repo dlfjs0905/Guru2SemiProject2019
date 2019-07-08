@@ -65,9 +65,9 @@
         android:id="@+id/btnLogin"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="28dp"
-        android:background="#B0EEF5"
+        android:background="#FFC107"
         android:text="로그인"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPw" />
@@ -78,11 +78,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="52dp"
-        android:background="#AFEDF4"
+        android:layout_marginEnd="28dp"
+        android:background="#FFC107"
         android:text="회원가입"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toEndOf="@+id/btnLogin"
         app:layout_constraintTop_toBottomOf="@+id/edtPw" />
 
