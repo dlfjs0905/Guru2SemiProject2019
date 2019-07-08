@@ -6,7 +6,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -88,11 +90,20 @@ public class NewMemoActivity extends AppCompatActivity {
         String photoPath = f1.mPhotoPath;
 
         Log.e("SEMI", "memoStr:" + memoStr + ", photoPath: " + photoPath);
-        Toast.makeText(this, "memoStr:" + memoStr + ", photoPath: " + photoPath, Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "memoStr:" + memoStr + ", photoPath: " + photoPath, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "저장되었습니다.", Toast.LENGTH_LONG).show();
 
         //파일 DB에 저장 처리
-        //Context context, String memId, MemoBean memoBean
-        //FileDB.addMemo(memoStr, );
+        //FileDB.addMemo(this, );
+
+        new Handler().postDelayed(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                finish();
+            }
+        }, 800);//딜레이를 준 후 시작
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
