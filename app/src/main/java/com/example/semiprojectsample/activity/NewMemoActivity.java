@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.semiprojectsample.R;
+import com.example.semiprojectsample.bean.MemberBean;
+import com.example.semiprojectsample.db.FileDB;
 import com.example.semiprojectsample.fragment.FragmentCamera;
 import com.example.semiprojectsample.fragment.FragmentMember;
 import com.example.semiprojectsample.fragment.FragmentMemo;
@@ -89,7 +91,8 @@ public class NewMemoActivity extends AppCompatActivity {
         Toast.makeText(this, "memoStr:" + memoStr + ", photoPath: " + photoPath, Toast.LENGTH_LONG).show();
 
         //파일 DB에 저장 처리
-
+        //Context context, String memId, MemoBean memoBean
+        //FileDB.addMemo(memoStr, );
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
