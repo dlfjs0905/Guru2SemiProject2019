@@ -79,6 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                 save();
                 Intent i = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(i);
+                finish();
             }
             else {
                 Toast.makeText(LoginActivity.this, "패스워드가 일치하지 않습니다.", Toast.LENGTH_LONG).show();

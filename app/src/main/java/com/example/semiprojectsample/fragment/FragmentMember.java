@@ -62,7 +62,6 @@ public class FragmentMember extends Fragment {
                                 Intent i = new Intent(getActivity(), LoginActivity.class);
                                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
                                 startActivity(i);
-
                             }
                         })
                         .setNegativeButton("취소", new DialogInterface.OnClickListener() {
@@ -77,4 +76,6 @@ public class FragmentMember extends Fragment {
 
         return view;
     }
+
+
 }
