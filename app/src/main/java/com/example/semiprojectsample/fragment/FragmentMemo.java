@@ -1,5 +1,6 @@
 package com.example.semiprojectsample.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -14,6 +15,9 @@ import android.widget.ListView;
 
 import com.example.semiprojectsample.R;
 import com.example.semiprojectsample.activity.NewMemoActivity;
+import com.example.semiprojectsample.bean.MemoBean;
+
+import java.util.List;
 
 
 public class FragmentMemo extends Fragment {
@@ -32,6 +36,8 @@ public class FragmentMemo extends Fragment {
                 startActivity(i);
             }
         });
+
+        
 
         return view;
     }
