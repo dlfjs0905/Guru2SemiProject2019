@@ -3,6 +3,7 @@ package com.example.semiprojectsample.fragment;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -31,7 +32,6 @@ import java.lang.reflect.Member;
 
 
 public class FragmentMember extends Fragment {
-
 
     @Nullable
     @Override
@@ -62,6 +62,7 @@ public class FragmentMember extends Fragment {
                                 Intent i = new Intent(getActivity(), LoginActivity.class);
                                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
                                 startActivity(i);
+
                             }
                         })
                         .setNegativeButton("취소", new DialogInterface.OnClickListener() {
