@@ -9,6 +9,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -16,12 +17,16 @@ import android.widget.Toast;
 
 import com.example.semiprojectsample.R;
 import com.example.semiprojectsample.bean.MemberBean;
+import com.example.semiprojectsample.bean.MemoBean;
 import com.example.semiprojectsample.db.FileDB;
 import com.example.semiprojectsample.fragment.FragmentCamera;
 import com.example.semiprojectsample.fragment.FragmentMember;
 import com.example.semiprojectsample.fragment.FragmentMemo;
 import com.example.semiprojectsample.fragment.FragmentMemoWrite;
 import com.google.android.material.tabs.TabLayout;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class NewMemoActivity extends AppCompatActivity {
 
@@ -89,12 +94,32 @@ public class NewMemoActivity extends AppCompatActivity {
         String memoStr = edtWriteMemo.getText().toString();
         String photoPath = f1.mPhotoPath;
 
+        //파일 DB에 저장 처리
+        MemoBean memoBean = new MemoBean();
+        memoBean.memoPicPath = photoPath;
+        memoBean.memo = memoStr;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-DD");
+        memoBean.memoDate = sdf.format(new Date());
+
+        //메모 공백 체크
+        if (TextUtils.isEmpty(memoStr)) {
+            Toast.makeText(this,"메모를 입력하세요.", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        //사진 공백 체크
+        if (photoPath == null) {
+            Toast.makeText(this,"사진을 찍으세요.", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        //memoBean을 파일로 저장한다.
+        MemberBean memberBean = FileDB.getLoginMember(this);
+        FileDB.addMemo(NewMemoActivity.this, memberBean.memId, memoBean);
+
         Log.e("SEMI", "memoStr:" + memoStr + ", photoPath: " + photoPath);
         //Toast.makeText(this, "memoStr:" + memoStr + ", photoPath: " + photoPath, Toast.LENGTH_SHORT).show();
         Toast.makeText(this, "저장되었습니다.", Toast.LENGTH_LONG).show();
-
-        //파일 DB에 저장 처리
-        //FileDB.addMemo(this, );
 
         new Handler().postDelayed(new Runnable()
         {

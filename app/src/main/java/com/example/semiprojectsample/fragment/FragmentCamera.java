@@ -35,7 +35,7 @@ import static android.app.Activity.RESULT_OK;
 
 public class FragmentCamera extends Fragment {
 
-    public String mPhotoPath="경로";
+    public String mPhotoPath = null;
 
     private Uri mCaptureUri;
     private Button mBtnPic;
